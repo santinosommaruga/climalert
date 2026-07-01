@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Clima{
+    -id: long
+    -fechaYHora: LocalDateTime
+    -temperatura: float
+    -humedad: float
+}
+
+class Notificador{
+    -destinatario: List<String>
+    - alerta: Alerta
+
+    +enviarMail(String destinatario, Clima clima): void
+}
+
+class Alerta{
+    -temperaturaMaxima: float
+    -porcentajeHumedadMaximo: float
+
+    +esCritica(Clima clima): Boolean
+}
+
+Notificador ..>  Clima
+Notificador -right-> Alerta
+
+@enduml
