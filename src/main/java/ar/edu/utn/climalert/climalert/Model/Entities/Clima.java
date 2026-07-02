@@ -1,4 +1,4 @@
-package ar.edu.utn.climalert.climalert.Model;
+package ar.edu.utn.climalert.climalert.Model.Entities;
 
 import lombok.Data;
 
