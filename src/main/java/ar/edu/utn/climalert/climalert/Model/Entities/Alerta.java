@@ -1,5 +1,7 @@
 package ar.edu.utn.climalert.climalert.Model.Entities;
 
+import ar.edu.utn.climalert.climalert.services.DTO.Clima;
+
 public class Alerta {
     private float temperaturaMaxima;
     private float porcentajeHumedadMaxima;
