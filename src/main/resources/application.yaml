@@ -1,5 +1,7 @@
+rest-temperatures:
+  base-url: http://api.weatherapi.com/v1
+  key: 15627ab23f0e4c818d8210301260707
+  location: Buenos Aires
 spring:
   application:
     name: climalert
-  rest-temperatures:
-    base-url: http://api.weatherapi.com/v1

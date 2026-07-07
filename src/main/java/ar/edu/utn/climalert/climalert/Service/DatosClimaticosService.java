@@ -8,4 +8,7 @@ public class DatosClimaticosService {
 
     public void evaluarDatosClimaticosXTiempo() {
     }
+
+    public void analizarYAlertar() {
+    }
 }

@@ -16,4 +16,9 @@ public class DatosClimaticosScheduler {
     public void evaluarDatosClimaticos(){
         datosClimaticosService.evaluarDatosClimaticosXTiempo();
     }
+
+    @Scheduled(fixedRate = 60000) //1minuto
+    public void analizarUltimoClima(){
+        datosClimaticosService.analizarYAlertar();
+    }
 }

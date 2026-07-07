@@ -15,6 +15,5 @@ public class Clima {
     private Locacion fechaYHora;
     @JsonProperty("current")
     private Temperatura temperatura;
-    @JsonProperty("current")
     private Temperatura humedad;
 }
