@@ -1,12 +1,13 @@
 package ar.edu.utn.climalert.climalert.Model.Entities;
 
-import ar.edu.utn.climalert.climalert.services.DTO.Clima;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Alerta {
-    private float temperaturaMaxima;
-    private float porcentajeHumedadMaxima;
+    private float temperaturaMaxima = 35;
+    private float porcentajeHumedadMaxima = 60;
 
-    public Boolean esCritica(Clima clima) {
+    public Boolean esCritica(RegistroClima clima) {
         return clima.getTemperatura() > this.temperaturaMaxima &&
                 clima.getHumedad() > this.porcentajeHumedadMaxima;
     }

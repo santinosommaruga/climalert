@@ -7,4 +7,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "rest-temperatures")
 public class RestTempProperties {
     private String baseUrl;
+    private String key;
+    private String location;
 }

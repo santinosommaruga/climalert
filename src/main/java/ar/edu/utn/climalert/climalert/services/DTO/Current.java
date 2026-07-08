@@ -1,18 +1,15 @@
 package ar.edu.utn.climalert.climalert.services.DTO;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class Temperatura {
+public class Current {
     @JsonProperty("humidity")
     private Integer humedad;
 
     @JsonProperty("temp_c")
     private float temperaturaCelsius;
+
 
 }
