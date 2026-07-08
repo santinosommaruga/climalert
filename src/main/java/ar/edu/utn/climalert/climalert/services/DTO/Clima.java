@@ -9,8 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Clima {
-    private long id;
-
     @JsonProperty("location")
     private Locacion fechaYHora;
     @JsonProperty("current")

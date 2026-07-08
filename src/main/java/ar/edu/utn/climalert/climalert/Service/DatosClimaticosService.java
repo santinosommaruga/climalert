@@ -8,6 +8,8 @@ import ar.edu.utn.climalert.climalert.services.BuscadorDatosClimaticos;
 import ar.edu.utn.climalert.climalert.services.DTO.Clima;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.LocalDateTime;
 
@@ -19,8 +21,10 @@ public class DatosClimaticosService {
     private ClimaRepository climaRepository;
     private Alerta alerta;
     private Notificador notificador;
+    private static final Logger log = LoggerFactory.getLogger(DatosClimaticosService.class);
 
     public void evaluarDatosClimaticosXTiempo() {
+
         Clima dto = buscadorDatosClimaticos.obtenerClimaActual();
 
         RegistroClima registro = new RegistroClima();
@@ -29,6 +33,7 @@ public class DatosClimaticosService {
         registro.setHumedad(dto.getCurrent().getHumedad());
 
         climaRepository.guardar(registro);
+        log.info("Clima registrado -> {}°C, {}% humedad", registro.getTemperatura(), registro.getHumedad());
     }
 
     public void analizarYAlertar() {
